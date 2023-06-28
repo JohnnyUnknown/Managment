@@ -1,0 +1,7 @@
+﻿  Managment.cpp
+F:\c#\My projects\С++\Managment\Managment\Managment.cpp(211,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+F:\c#\My projects\С++\Managment\Managment\Managment.cpp(627,23): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+F:\c#\My projects\С++\Managment\Managment\Managment.cpp(629,22): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+F:\c#\My projects\С++\Managment\Managment\Managment.cpp(639,23): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+F:\c#\My projects\С++\Managment\Managment\Managment.cpp(641,22): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  Managment.vcxproj -> F:\c#\My projects\С++\Managment\x64\Debug\Managment.exe
