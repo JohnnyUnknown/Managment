@@ -1,10 +1,14 @@
 ﻿#include <iostream>
 #include <stdlib.h>
 #include <conio.h>
+#include <windows.h>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
 class Bank;
+int endGame();
 
 // Заявка на покупку ЕСМ
 struct buyESM
@@ -52,6 +56,24 @@ int foolProof()
     }
     return digit;
 }
+// Функция вывода правил игры
+void Rules()
+{
+    system("cls");
+    const char* path = "F:\\c#\\My projects\\С++\\Managment\\Rules.txt";
+    string line;
+    ifstream in(path); // окрываем файл для чтения
+    if (in.is_open())
+    {
+        while (getline(in, line))
+        {
+            cout << line << endl;
+        }
+    }
+    in.close();
+    _getch();
+    endGame();
+}
 // Ввод количества игроков в начале игры
 int numberOfPlayers()
 {
@@ -71,9 +93,10 @@ int endGame()
     do
     {
         system("cls");
-        cout << "Выберите режим игры:\n\n1 - До последнего игрока;\n2 - По количеству месяцев;\n\n";
+        cout << "Выберите режим игры:\n\n1 - До последнего игрока;\n2 - По количеству месяцев;\n"
+            << "3 - Правила игры.\n\n";
         input = foolProof();
-    } while (input < 1 || input > 2);
+    } while (input < 1 || input > 3);
     if (input == 2)
     {
         do
@@ -84,6 +107,7 @@ int endGame()
         } while (num < 13 || num > 60);
         return num;
     }
+    else if (input == 3) Rules();
     else return 1000;
 }
 
